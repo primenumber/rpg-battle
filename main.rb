@@ -117,6 +117,8 @@ def big_str(str)
 end
 
 def show_status
+  put_str(@player.view, Curses.lines - 15, 5)
+  put_str(@enemy.view, 5, 25)
   @status_window.clear
   @status_window.setpos(1, 1)
   @status_window.addstr("Player HP: #{@player.hp}")
